@@ -45,6 +45,20 @@ io.on("connection", (socket) => {
 
     })
 
+    socket.on("userLogin", (msg) => {
+        console.log('userLogin')
+        console.log(msg)
+        socket.broadcast.emit("responseUserLogin", msg)
+
+    })
+
+    socket.on("userLogOut", (msg) => {
+        console.log('userLogOut')
+        console.log(msg)
+        socket.broadcast.emit("responseUserLogOut", msg)
+
+    })
+
     socket.on("disconnect", (reason) => {
         console.log(reason); // "ping timeout"
     });
