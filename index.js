@@ -65,6 +65,6 @@ io.on("connection", (socket) => {
 
 });
 
-httpServer.listen(3000, (msg) => {
+httpServer.listen(3010, (msg) => {
     console.log('server jalan di port 3000')
 });
